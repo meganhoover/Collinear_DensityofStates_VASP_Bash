@@ -2,7 +2,7 @@
 
 # This script separates all the atoms into separate data files. Keep in mind this script was written for a 96 atom UO2 supercell.
 # Columns in VASP DOSCAR file with f-orbitals:
-# energy, s, -s, py, -py, pz, -pz, px, -px, dxy, -dxy, dyz, -dyz, dz2, -dz2, dxz, -dxz, dx2-y2, -dx2-y2, fy3x2, -fy3x2, fxyz, -fxyz, fyz2, -fyz2, fz3, -fz3, fxz2, -fxz2, fzx2, -fzx2, fx3, -fx3
+# energy, s, -s, py, -py, pz, -pz, px, -px, dxy, -dxy, dyz, -dyz, dz2, -dz2, dxz, -dxz, dx2-y2, -dx2-y2, (it is still a little unclear if these are the correct angular factors for cubic f orbitals in VASP) fy3x2, -fy3x2, fxyz, -fxyz, fyz2, -fyz2, fz3, -fz3, fxz2, -fxz2, fzx2, -fzx2, fx3, -fx3
 
 # number of lines of interest
 nl=$(wc -l DOSCAR | sed '308s/://g' | awk '{print $1}') 
